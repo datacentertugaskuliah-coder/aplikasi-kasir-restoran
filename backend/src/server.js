@@ -10,6 +10,7 @@ const availabilityRoutes = require('./routes/availabilityRoutes');
 const tableRoutes = require('./routes/tableRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const cashierOrderRoutes = require('./routes/cashierOrderRoutes');
+const transactionRoutes = require('./routes/transactionRoutes');
 
 const app = express();
 app.use(cors());
@@ -24,6 +25,7 @@ app.use('/api/availability', availabilityRoutes);
 app.use('/api/tables', tableRoutes);
 app.use('/api/orders', cashierOrderRoutes); // /active dan /:id/open-for-payment, /:id/complete
 app.use('/api/orders', orderRoutes); // /table, /walk-in, /:id, /:id/items
+app.use('/api/transactions', transactionRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 

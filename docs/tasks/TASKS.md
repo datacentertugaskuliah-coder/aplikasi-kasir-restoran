@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, dan Manajemen Meja & Order selesai)
+**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, Manajemen Meja & Order, dan Transaksi & Pembayaran selesai)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -48,13 +48,13 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 - [x] Kasir: lihat & buka order per meja untuk proses pembayaran
 - [x] Update status meja otomatis setelah pembayaran selesai
 
-### 4. Transaksi & Pembayaran
-- [ ] Skema database: tabel `transactions`, `transaction_items`
-- [ ] Alur input order langsung oleh Kasir (walk-in)
-- [ ] Proses pembayaran cash + kalkulasi kembalian otomatis
-- [ ] Simpan riwayat transaksi harian (dengan referensi kasir yang memproses)
-- [ ] Halaman riwayat transaksi (filter by tanggal/kasir)
-- [ ] Struk digital (tampilan ringkasan setelah transaksi selesai)
+### 4. Transaksi & Pembayaran ✅ SELESAI
+- [x] Skema database: tabel `transactions`, `transaction_items`
+- [x] Alur input order langsung oleh Kasir (walk-in)
+- [x] Proses pembayaran cash + kalkulasi kembalian otomatis
+- [x] Simpan riwayat transaksi harian (dengan referensi kasir yang memproses)
+- [x] Halaman riwayat transaksi (filter by tanggal/kasir)
+- [x] Struk digital (tampilan ringkasan setelah transaksi selesai)
 
 ### 5. Manajemen Stok/Inventory (dasar)
 - [ ] Skema database: tabel `stock` terhubung ke menu item

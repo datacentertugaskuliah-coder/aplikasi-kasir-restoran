@@ -19,3 +19,7 @@ router.put('/:id/items/:itemId', authenticate, authorize('owner', 'pelayan', 'ka
 router.delete('/:id/items/:itemId', authenticate, authorize('owner', 'pelayan', 'kasir'), removeOrderItem);
 
 module.exports = router;
+
+// Convenience endpoint Kasir: buat order walk-in + tambah semua item sekaligus
+const { createWalkInOrderWithItems } = require('../controllers/walkInController');
+router.post('/walk-in/quick', authenticate, authorize('owner', 'kasir'), createWalkInOrderWithItems);
