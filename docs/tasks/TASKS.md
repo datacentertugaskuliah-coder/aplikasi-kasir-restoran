@@ -1,21 +1,22 @@
 # Task List — Implementasi Aplikasi Kasir Restoran
 
-**Referensi:** `doc/PRD_Aplikasi_Kasir_Restoran.md`
+**Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
-**Status:** To Do
+**Terakhir diupdate:** 9 September 2026
+**Status:** In Progress (Fase 0 selesai)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
 ---
 
-## Fase 0 — Project Setup
+## Fase 0 — Project Setup ✅ SELESAI
 
-- [ ] Inisialisasi project (pilih stack: frontend framework, backend, database)
-- [ ] Setup struktur folder project (frontend/backend/shared)
-- [ ] Setup environment config (.env, .env.example)
-- [ ] Setup linter & formatter (ESLint/Prettier atau setara)
-- [ ] Setup database schema awal (users, roles)
-- [ ] Konfigurasi CI dasar (opsional, lint/test on push)
+- [x] Inisialisasi project (stack dipilih: Node.js + Express backend, React/Vite frontend, PostgreSQL/SQLite)
+- [x] Setup struktur folder project (backend/frontend/docs)
+- [x] Setup environment config (.env.example untuk backend & frontend)
+- [x] Setup linter & formatter (ESLint + Prettier)
+- [x] Setup database schema awal (tabel `roles`, `users`)
+- [x] Konfigurasi CI dasar (GitHub Actions — lint on push)
 
 ---
 
@@ -111,8 +112,6 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 ---
 
 ## Catatan: Perlu Klarifikasi Sebelum/Selama Development
-
-Beberapa item di bawah masih "Open Questions" di PRD dan mempengaruhi task di atas — perlu dijawab sebelum implementasi fitur terkait selesai 100%:
 
 - [ ] Mode koneksi: online-only vs offline-first?
 - [ ] Kebutuhan cetak struk fisik di Fase 1 (meski tanpa printer khusus)?
