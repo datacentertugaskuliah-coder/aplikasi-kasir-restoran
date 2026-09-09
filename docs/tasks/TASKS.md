@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, Manajemen Meja & Order, dan Transaksi & Pembayaran selesai)
+**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, Manajemen Meja & Order, Transaksi & Pembayaran, Manajemen Stok/Inventory, dan Laporan & Analitik selesai)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -56,18 +56,19 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 - [x] Halaman riwayat transaksi (filter by tanggal/kasir)
 - [x] Struk digital (tampilan ringkasan setelah transaksi selesai)
 
-### 5. Manajemen Stok/Inventory (dasar)
-- [ ] Skema database: tabel `stock` terhubung ke menu item
-- [ ] Input/update stok manual oleh Owner/Kasir
-- [ ] Notifikasi/badge stok menipis atau habis
-- [ ] Auto-nonaktifkan menu saat stok habis (opsional toggle)
+### 5. Manajemen Stok/Inventory (dasar) ✅ SELESAI
+> Asumsi: model stok per menu jadi (bukan per bahan baku/resep) — lihat catatan Open Questions.
+- [x] Skema database: tabel `stock` terhubung ke menu item
+- [x] Input/update stok manual oleh Owner/Kasir
+- [x] Notifikasi/badge stok menipis atau habis
+- [x] Auto-nonaktifkan menu saat stok habis (opsional toggle)
 
-### 6. Laporan & Analitik (dasar)
-- [ ] Laporan penjualan harian
-- [ ] Laporan penjualan mingguan/bulanan
-- [ ] Ranking menu terlaris
-- [ ] Total transaksi per kasir
-- [ ] Dashboard ringkasan pendapatan (akses Owner, dari dalam restoran)
+### 6. Laporan & Analitik (dasar) ✅ SELESAI
+- [x] Laporan penjualan harian
+- [x] Laporan penjualan mingguan/bulanan
+- [x] Ranking menu terlaris
+- [x] Total transaksi per kasir
+- [x] Dashboard ringkasan pendapatan (akses Owner, dari dalam restoran)
 
 ### 7. UI/UX Tablet
 - [ ] Desain layout responsif khusus tablet (touch-friendly, tombol besar)
