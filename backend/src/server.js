@@ -7,6 +7,9 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const menuItemRoutes = require('./routes/menuItemRoutes');
 const bundleRoutes = require('./routes/bundleRoutes');
 const availabilityRoutes = require('./routes/availabilityRoutes');
+const tableRoutes = require('./routes/tableRoutes');
+const orderRoutes = require('./routes/orderRoutes');
+const cashierOrderRoutes = require('./routes/cashierOrderRoutes');
 
 const app = express();
 app.use(cors());
@@ -18,6 +21,9 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/menu-items', menuItemRoutes);
 app.use('/api/bundles', bundleRoutes);
 app.use('/api/availability', availabilityRoutes);
+app.use('/api/tables', tableRoutes);
+app.use('/api/orders', cashierOrderRoutes); // /active dan /:id/open-for-payment, /:id/complete
+app.use('/api/orders', orderRoutes); // /table, /walk-in, /:id, /:id/items
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 

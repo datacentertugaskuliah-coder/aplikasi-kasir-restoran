@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User selesai, Manajemen Menu selesai)
+**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, dan Manajemen Meja & Order selesai)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -38,15 +38,15 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 - [x] Toggle ketersediaan menu (habis/tersedia) — bisa diakses Kasir/Pelayan
 - [x] Halaman/list menu untuk dipilih saat input order (grid tablet-friendly)
 
-### 3. Manajemen Meja & Order
-- [ ] Skema database: tabel `tables` (nomor meja, status), `orders`, `order_items`
-- [ ] Daftar meja dengan status visual (kosong/terisi/menunggu pembayaran)
-- [ ] Pelayan: buka order baru per meja
-- [ ] Tambah/edit/hapus item dalam order (sebelum dibayar)
-- [ ] Catatan khusus per item (misal "tidak pedas")
-- [ ] Sinkronisasi order antar device (pelayan → kasir) real-time atau polling
-- [ ] Kasir: lihat & buka order per meja untuk proses pembayaran
-- [ ] Update status meja otomatis setelah pembayaran selesai
+### 3. Manajemen Meja & Order ✅ SELESAI
+- [x] Skema database: tabel `tables` (nomor meja, status), `orders`, `order_items`
+- [x] Daftar meja dengan status visual (kosong/terisi/menunggu pembayaran)
+- [x] Pelayan: buka order baru per meja
+- [x] Tambah/edit/hapus item dalam order (sebelum dibayar)
+- [x] Catatan khusus per item (misal "tidak pedas")
+- [x] Sinkronisasi order antar device (pelayan → kasir) real-time atau polling
+- [x] Kasir: lihat & buka order per meja untuk proses pembayaran
+- [x] Update status meja otomatis setelah pembayaran selesai
 
 ### 4. Transaksi & Pembayaran
 - [ ] Skema database: tabel `transactions`, `transaction_items`
