@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai, Fase 1 bagian 1: Autentikasi & Manajemen User selesai)
+**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User selesai, Manajemen Menu selesai)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -30,13 +30,13 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 - [x] CRUD user oleh Owner (tambah/edit/nonaktifkan akun kasir & pelayan)
 - [x] Session/token handling & logout
 
-### 2. Manajemen Menu
-- [ ] Skema database: tabel `categories`, `menu_items`, `bundles` (paket)
-- [ ] CRUD kategori menu (Owner)
-- [ ] CRUD item menu: nama, harga, deskripsi, foto (opsional), status aktif/nonaktif
-- [ ] CRUD paket/bundling menu (kombinasi item + harga khusus)
-- [ ] Toggle ketersediaan menu (habis/tersedia) — bisa diakses Kasir/Pelayan
-- [ ] Halaman/list menu untuk dipilih saat input order (grid tablet-friendly)
+### 2. Manajemen Menu ✅ SELESAI
+- [x] Skema database: tabel `categories`, `menu_items`, `bundles` (paket)
+- [x] CRUD kategori menu (Owner)
+- [x] CRUD item menu: nama, harga, deskripsi, foto (opsional), status aktif/nonaktif
+- [x] CRUD paket/bundling menu (kombinasi item + harga khusus)
+- [x] Toggle ketersediaan menu (habis/tersedia) — bisa diakses Kasir/Pelayan
+- [x] Halaman/list menu untuk dipilih saat input order (grid tablet-friendly)
 
 ### 3. Manajemen Meja & Order
 - [ ] Skema database: tabel `tables` (nomor meja, status), `orders`, `order_items`
