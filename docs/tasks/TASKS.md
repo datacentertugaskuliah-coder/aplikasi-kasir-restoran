@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai)
+**Status:** In Progress (Fase 0 selesai, Fase 1 bagian 1: Autentikasi & Manajemen User selesai)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -22,13 +22,13 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 
 ## Fase 1 — MVP (Prioritas Utama)
 
-### 1. Autentikasi & Manajemen User
-- [ ] Skema database: tabel `users` (id, nama, username, password_hash, role)
-- [ ] Endpoint/logic login per role (Kasir, Pelayan, Owner)
-- [ ] Middleware/guard otorisasi berdasarkan role
-- [ ] Halaman login (UI, tablet-friendly)
-- [ ] CRUD user oleh Owner (tambah/edit/nonaktifkan akun kasir & pelayan)
-- [ ] Session/token handling & logout
+### 1. Autentikasi & Manajemen User ✅ SELESAI
+- [x] Skema database: tabel `users` (id, nama, username, password_hash, role)
+- [x] Endpoint/logic login per role (Kasir, Pelayan, Owner)
+- [x] Middleware/guard otorisasi berdasarkan role
+- [x] Halaman login (UI, tablet-friendly)
+- [x] CRUD user oleh Owner (tambah/edit/nonaktifkan akun kasir & pelayan)
+- [x] Session/token handling & logout
 
 ### 2. Manajemen Menu
 - [ ] Skema database: tabel `categories`, `menu_items`, `bundles` (paket)
