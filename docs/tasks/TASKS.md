@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, Manajemen Meja & Order, Transaksi & Pembayaran, Manajemen Stok/Inventory, dan Laporan & Analitik selesai)
+**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, Manajemen Meja & Order, Transaksi & Pembayaran, Manajemen Stok/Inventory, Laporan & Analitik selesai; UI/UX Tablet — kode selesai, testing manual tertunda)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -70,10 +70,10 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 - [x] Total transaksi per kasir
 - [x] Dashboard ringkasan pendapatan (akses Owner, dari dalam restoran)
 
-### 7. UI/UX Tablet
-- [ ] Desain layout responsif khusus tablet (touch-friendly, tombol besar)
-- [ ] Navigasi role-based (menu berbeda untuk Kasir/Pelayan/Owner)
-- [ ] Testing di ukuran layar tablet umum (iPad, Android tablet)
+### 7. UI/UX Tablet ⚠️ SELESAI (kode) — testing manual tertunda
+- [x] Desain layout responsif khusus tablet (touch-friendly, tombol besar)
+- [x] Navigasi role-based (menu berbeda untuk Kasir/Pelayan/Owner)
+- [ ] Testing di ukuran layar tablet umum (iPad, Android tablet) — checklist tersedia di `docs/testing/tablet-testing-checklist.md`, **perlu dieksekusi manual di perangkat fisik**
 
 ### 8. Testing & QA Fase 1
 - [ ] Unit test untuk logic transaksi & kalkulasi kembalian
