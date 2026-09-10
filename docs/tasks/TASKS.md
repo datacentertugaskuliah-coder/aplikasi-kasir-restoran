@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai; Fase 1: 6 bagian selesai penuh, UI/UX Tablet & Testing/QA selesai sebagian — menunggu eksekusi manual/live environment)
+**Status:** Fase 1 (MVP) — semua kode & dokumentasi 9 bagian selesai ditulis. Yang masih memerlukan tindakan manusia langsung: testing E2E otomatis (butuh DB live), UAT, dan deployment sungguhan (butuh akun hosting + eksekusi staging→production→training). Lihat catatan status per bagian di atas untuk detail.
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -81,11 +81,11 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 - [ ] Test alur end-to-end: order langsung via kasir (walk-in) — skrip test ditulis (`backend/tests/e2e-walkin-flow.test.js`), **belum dieksekusi**, butuh PostgreSQL live + seed data
 - [ ] User acceptance testing bareng kasir/pelayan asli di restoran — skrip terstruktur tersedia (`docs/testing/uat-script.md`), **belum dilaksanakan**, butuh aplikasi live + jadwal dengan staf
 
-### 9. Deployment Fase 1
-- [ ] Setup hosting (web app + database)
-- [ ] Deploy versi staging untuk uji coba internal
-- [ ] Deploy versi production
-- [ ] Training singkat untuk kasir & pelayan
+### 9. Deployment Fase 1 ⚠️ KONFIGURASI SIAP — eksekusi belum dilakukan
+- [x] Setup hosting (web app + database) — Dockerfile + docker-compose.yml siap pakai; **panduan hosting tersedia** (`docs/deployment/deployment-guide.md`), **eksekusi ke akun hosting nyata belum dilakukan**
+- [ ] Deploy versi staging untuk uji coba internal — panduan langkah-demi-langkah tersedia, **belum dieksekusi**, perlu akun hosting (Railway/Render/dll)
+- [ ] Deploy versi production — panduan tersedia, **belum dieksekusi**, menunggu staging selesai diverifikasi dulu
+- [ ] Training singkat untuk kasir & pelayan — materi lengkap tersedia (`docs/training/training-guide.md`), **belum dilaksanakan**, butuh aplikasi live + jadwal tatap muka
 
 ---
 

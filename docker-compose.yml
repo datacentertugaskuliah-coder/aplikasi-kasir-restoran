@@ -1,0 +1,40 @@
+# Docker Compose — menjalankan seluruh stack (database + backend + frontend) sekaligus.
+# Untuk development/staging lokal: docker compose up --build
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: kasir_restoran
+      POSTGRES_USER: kasir_user
+      POSTGRES_PASSWORD: change_this_password
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./backend/src/migrations:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://kasir_user:change_this_password@db:5432/kasir_restoran
+      JWT_SECRET: change_this_secret_in_production
+      PORT: 4000
+    ports:
+      - "4000:4000"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+
+volumes:
+  db_data:
