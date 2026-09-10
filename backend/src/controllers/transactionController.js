@@ -2,6 +2,7 @@
 const Transaction = require('../models/Transaction');
 const Order = require('../models/Order');
 const Table = require('../models/Table');
+const { calculateSubtotal, calculateTotal, calculateChange } = require('../utils/paymentCalculator');
 
 // Proses pembayaran cash untuk sebuah order.
 // Kalkulasi kembalian dilakukan di server (bukan percaya input client) untuk menghindari manipulasi.
@@ -17,16 +18,15 @@ async function processPayment(req, res) {
     return res.status(409).json({ error: 'Order ini sudah dibayar sebelumnya' });
   }
 
-  const subtotal = order.items.reduce(
-    (sum, item) => sum + Number(item.unit_price) * item.quantity,
-    0
-  );
-  const total = subtotal; // pajak/service charge belum diterapkan di Fase 1 (lihat Open Questions PRD)
+  const subtotal = calculateSubtotal(order.items);
+  const total = calculateTotal(subtotal); // pajak/service charge belum diterapkan di Fase 1
 
-  if (amountPaid < total) {
-    return res.status(400).json({ error: 'Jumlah pembayaran kurang dari total tagihan' });
+  let changeAmount;
+  try {
+    changeAmount = calculateChange(amountPaid, total);
+  } catch (err) {
+    return res.status(400).json({ error: err.message });
   }
-  const changeAmount = amountPaid - total;
 
   const transaction = await Transaction.create({
     orderId,

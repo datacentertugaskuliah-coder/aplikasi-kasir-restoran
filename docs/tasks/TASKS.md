@@ -3,7 +3,7 @@
 **Referensi:** `docs/PRD_Aplikasi_Kasir_Restoran.md`
 **Tanggal dibuat:** 9 September 2026
 **Terakhir diupdate:** 9 September 2026
-**Status:** In Progress (Fase 0 selesai; Fase 1: Autentikasi & Manajemen User, Manajemen Menu, Manajemen Meja & Order, Transaksi & Pembayaran, Manajemen Stok/Inventory, Laporan & Analitik selesai; UI/UX Tablet — kode selesai, testing manual tertunda)
+**Status:** In Progress (Fase 0 selesai; Fase 1: 6 bagian selesai penuh, UI/UX Tablet & Testing/QA selesai sebagian — menunggu eksekusi manual/live environment)
 
 Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentang langsung di GitHub (render sebagai checkbox interaktif).
 
@@ -75,11 +75,11 @@ Task list ini disusun mengikuti roadmap 4 fase pada PRD. Checklist bisa dicentan
 - [x] Navigasi role-based (menu berbeda untuk Kasir/Pelayan/Owner)
 - [ ] Testing di ukuran layar tablet umum (iPad, Android tablet) — checklist tersedia di `docs/testing/tablet-testing-checklist.md`, **perlu dieksekusi manual di perangkat fisik**
 
-### 8. Testing & QA Fase 1
-- [ ] Unit test untuk logic transaksi & kalkulasi kembalian
-- [ ] Test alur end-to-end: order via pelayan → bayar via kasir
-- [ ] Test alur end-to-end: order langsung via kasir (walk-in)
-- [ ] User acceptance testing bareng kasir/pelayan asli di restoran
+### 8. Testing & QA Fase 1 ⚠️ SEBAGIAN SELESAI
+- [x] Unit test untuk logic transaksi & kalkulasi kembalian — **10 test ditulis DAN dijalankan, semua PASS** (`backend/tests/paymentCalculator.test.js`)
+- [ ] Test alur end-to-end: order via pelayan → bayar via kasir — skrip test ditulis (`backend/tests/e2e-pelayan-kasir-flow.test.js`), **belum dieksekusi**, butuh PostgreSQL live + seed data
+- [ ] Test alur end-to-end: order langsung via kasir (walk-in) — skrip test ditulis (`backend/tests/e2e-walkin-flow.test.js`), **belum dieksekusi**, butuh PostgreSQL live + seed data
+- [ ] User acceptance testing bareng kasir/pelayan asli di restoran — skrip terstruktur tersedia (`docs/testing/uat-script.md`), **belum dilaksanakan**, butuh aplikasi live + jadwal dengan staf
 
 ### 9. Deployment Fase 1
 - [ ] Setup hosting (web app + database)

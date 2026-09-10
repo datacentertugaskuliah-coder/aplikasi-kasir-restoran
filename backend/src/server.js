@@ -33,5 +33,11 @@ app.use('/api/reports', reportRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => console.log(`Server berjalan di port ${PORT}`));
+// Hanya jalankan server jika file ini dieksekusi langsung (bukan saat di-import oleh test).
+// Pola ini memungkinkan `app` diimpor oleh supertest tanpa membuka port sungguhan.
+if (require.main === module) {
+  const PORT = process.env.PORT || 4000;
+  app.listen(PORT, () => console.log(`Server berjalan di port ${PORT}`));
+}
+
+module.exports = app;
